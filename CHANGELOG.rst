@@ -2,6 +2,99 @@
 Changelog for package tiago_pro_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.35.4 (2026-02-10)
+-------------------
+* adding calibration_tool param
+* Contributors: silviamasiello
+
+1.35.3 (2026-02-09)
+-------------------
+* fix param bug
+* Contributors: matteovillani
+
+1.35.2 (2026-02-05)
+-------------------
+* test fix
+* fix pipeline
+* fix test identation
+* delete teleop end effectors
+* add enable wrist camera option
+* Contributors: ileniaperrella
+
+1.35.1 (2026-02-03)
+-------------------
+
+1.35.0 (2026-02-02)
+-------------------
+* fix inertia for basestation
+* update end effector camera base link (typo)
+* change name from teleop_basestation to pilot_station
+* reset calibration_offset
+* offsets for tp28
+* add camera to the wrist
+* update modules with ee_teleop
+* fix test allegro hand descr
+* fix test args
+* exclude allegro-hand for testing
+* add test for xacro
+* add end_effector_teleop_right and end_effector_teleop_left in files
+* add basestation urdf
+* fix FT sensors after rebase
+* rm non existing directory
+* add ft ros2 control
+* add ft sensor on teleop arms
+* fix urdf
+* add modules and fix default controllers
+* fix joint reflect
+* add teleop args
+* add teleop arms in the urdf
+* Contributors: ileniaperrella, vivianamorlando
+
+1.34.3 (2026-01-28)
+-------------------
+* Add parameter expose_safety_interface
+* Contributors: Noel Jimenez
+
+1.34.2 (2026-01-27)
+-------------------
+* Add parameter expose_collision_interface
+* Contributors: Noel Jimenez
+
+1.34.1 (2026-01-08)
+-------------------
+* rename calibration directory
+* Contributors: silviamasiello
+
+1.34.0 (2025-12-15)
+-------------------
+* changes for head_offset
+* changes for head_offset
+* changes for head_offset
+* changes for head_offset
+* head_offset
+* reduction param
+* reduction param
+* offset
+* offset
+* offset
+* adding head calibration offset
+* adding head calibration offset
+* Contributors: silviamasiello
+
+1.33.0 (2025-12-05)
+-------------------
+* Add gazebo_version xacro argument
+* Contributors: Noel Jimenez
+
+1.32.3 (2025-11-28)
+-------------------
+
+1.32.2 (2025-11-12)
+-------------------
+* changing max and mid value
+* changing max and mid value
+* Contributors: susannamastromauro
+
 1.32.1 (2025-11-03)
 -------------------
 * Fix humble tests excluding allegro hand end-effector
