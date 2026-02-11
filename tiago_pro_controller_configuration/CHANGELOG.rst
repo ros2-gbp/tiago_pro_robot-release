@@ -2,6 +2,66 @@
 Changelog for package tiago_pro_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.35.4 (2026-02-10)
+-------------------
+
+1.35.3 (2026-02-09)
+-------------------
+
+1.35.2 (2026-02-05)
+-------------------
+* delete teleop end effectors
+* Contributors: ileniaperrella
+
+1.35.1 (2026-02-03)
+-------------------
+
+1.35.0 (2026-02-02)
+-------------------
+* change name from teleop_basestation to pilot_station
+* delete not necessary PIDs (to retune)
+* delete cartesian force not used
+* update modules with ee_teleop
+* add test for xacro
+* add grippers actuators pids to improve ctrl
+* remove not used params in cartesian forc ctrl
+* add end_effector_teleop_right and end_effector_teleop_left in files
+* add basestation urdf
+* add pids yaml for gripper
+* Adding haptic feeback info to params
+* add motion for teleop task
+* add cartesian controller for teleop left arm
+* add gravity compensation teleop left and right
+* add modules and fix default controllers
+* add teleop args
+* Contributors: ileniaperrella, vivianamorlando
+
+1.34.3 (2026-01-28)
+-------------------
+* correcting gains
+* rm unused file
+* Contributors: vivianamorlando
+
+1.34.2 (2026-01-27)
+-------------------
+
+1.34.1 (2026-01-08)
+-------------------
+* Add "Hardware Components Activity" module dependency
+* Contributors: Noel Jimenez
+
+1.34.0 (2025-12-15)
+-------------------
+
+1.33.0 (2025-12-05)
+-------------------
+
+1.32.3 (2025-11-28)
+-------------------
+
+1.32.2 (2025-11-12)
+-------------------
+
 1.32.1 (2025-11-03)
 -------------------
 
