@@ -37,6 +37,8 @@ class LaunchArguments(LaunchArgumentsBase):
     end_effector_left: DeclareLaunchArgument = TiagoProArgs.end_effector_left
     ft_sensor_right: DeclareLaunchArgument = TiagoProArgs.ft_sensor_right
     ft_sensor_left: DeclareLaunchArgument = TiagoProArgs.ft_sensor_left
+    ft_sensor_teleop_right: DeclareLaunchArgument = TiagoProArgs.ft_sensor_teleop_right
+    ft_sensor_teleop_left: DeclareLaunchArgument = TiagoProArgs.ft_sensor_teleop_left
     wrist_model_right: DeclareLaunchArgument = TiagoProArgs.wrist_model_right
     wrist_model_left: DeclareLaunchArgument = TiagoProArgs.wrist_model_left
     camera_model: DeclareLaunchArgument = TiagoProArgs.camera_model
@@ -44,6 +46,9 @@ class LaunchArguments(LaunchArgumentsBase):
     tool_changer_right: DeclareLaunchArgument = TiagoProArgs.tool_changer_right
     tool_changer_left: DeclareLaunchArgument = TiagoProArgs.tool_changer_left
     torque_estimation: DeclareLaunchArgument = TiagoProArgs.torque_estimation
+    has_teleop_arms: DeclareLaunchArgument = TiagoProArgs.has_teleop_arms
+    has_wrist_camera: DeclareLaunchArgument = TiagoProArgs.has_wrist_camera
+    calibration_tool: DeclareLaunchArgument = TiagoProArgs.calibration_tool
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     namespace: DeclareLaunchArgument = CommonArgs.namespace
 
@@ -59,6 +64,8 @@ def declare_actions(launch_description: LaunchDescription, launch_args: LaunchAr
                           "end_effector_left": launch_args.end_effector_left,
                           "ft_sensor_right": launch_args.ft_sensor_right,
                           "ft_sensor_left": launch_args.ft_sensor_left,
+                          "ft_sensor_teleop_right": launch_args.ft_sensor_teleop_right,
+                          "ft_sensor_teleop_left": launch_args.ft_sensor_teleop_left,
                           "wrist_model_right": launch_args.wrist_model_right,
                           "wrist_model_left": launch_args.wrist_model_left,
                           "laser_model": launch_args.laser_model,
@@ -67,8 +74,11 @@ def declare_actions(launch_description: LaunchDescription, launch_args: LaunchAr
                           'tool_changer_right': launch_args.tool_changer_right,
                           'tool_changer_left': launch_args.tool_changer_left,
                           'torque_estimation': launch_args.torque_estimation,
+                          'calibration_tool': launch_args.calibration_tool,
                           "namespace": launch_args.namespace,
-                          "use_sim_time": launch_args.use_sim_time
+                          "use_sim_time": launch_args.use_sim_time,
+                          "has_teleop_arms": launch_args.has_teleop_arms,
+                          "has_wrist_camera": launch_args.has_wrist_camera
                           })
 
     launch_description.add_action(robot_state_publisher)
