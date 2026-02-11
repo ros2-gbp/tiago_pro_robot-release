@@ -1,0 +1,12 @@
+Source: ros-humble-tiago-pro-bringup
+Section: misc
+Priority: optional
+Maintainer: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake-auto, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-tiago-pro-bringup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-ament-index-python, ros-humble-diagnostic-aggregator, ros-humble-joy-linux, ros-humble-joy-teleop, ros-humble-pal-pro-gripper-wrapper, ros-humble-play-motion2, ros-humble-play-motion2-cli, ros-humble-tiago-pro-controller-configuration, ros-humble-tiago-pro-head-bringup, ros-humble-twist-mux, ros-humble-ros-workspace
+Description: Launch files to upload the TIAGo pro robot description and start the controllers

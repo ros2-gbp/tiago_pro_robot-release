@@ -1,0 +1,853 @@
+ros-humble-tiago-pro-bringup (1.35.4-1jammy) jammy; urgency=high
+
+  * adding calibration_tool param
+  * Contributors: silviamasiello
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 10 Feb 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.35.3-1jammy) jammy; urgency=high
+
+  * add boxing motion for teleop station
+  * fix param bug
+  * Contributors: ileniaperrella, matteovillani
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 09 Feb 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.35.2-1jammy) jammy; urgency=high
+
+  * delete teleop end effectors
+  * fix play_motion2
+  * add enable wrist camera option
+  * Contributors: ileniaperrella
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 05 Feb 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.35.1-1jammy) jammy; urgency=high
+
+  * remove whitespace pipeline
+  * fix condition in the play_motion2 teleop
+  * Contributors: ileniaperrella
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 03 Feb 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.35.0-1jammy) jammy; urgency=high
+
+  * modify motion for last joint
+  * add motion planning for tleeop arms
+  * change motions file for teleop
+  * update modules with ee_teleop
+  * add test for xacro
+  * add end_effector_teleop_right and end_effector_teleop_left in files
+  * update play_motion2 namespace
+  * add motion for teleop task
+  * add ft sensor on teleop arms
+  * add modules and fix default controllers
+  * add motions for teleop arms (usable only with skip_planning)
+  * add teleop args
+  * Contributors: ileniaperrella
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 02 Feb 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.34.3-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 28 Jan 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.34.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 27 Jan 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.34.1-1jammy) jammy; urgency=high
+
+  * Add torso motions with no arms
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 08 Jan 2026 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.34.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 15 Dec 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.33.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 05 Dec 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.32.3-1jammy) jammy; urgency=high
+
+  * fixing values
+  * changing values motions
+  * Contributors: susannamastromauro
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 28 Nov 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.32.2-1jammy) jammy; urgency=high
+
+  * changing max and mid value
+  * changing gripper values motion
+  * fixing gripper limits
+  * Contributors: susannamastromauro
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 12 Nov 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.32.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 03 Nov 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.32.0-1jammy) jammy; urgency=high
+
+  * Add play_motion2 cli dependency
+  * Contributors: Isaac Acevedo
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 23 Oct 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.31.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 21 Oct 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.31.1-1jammy) jammy; urgency=high
+
+  * preparing pkg for public release
+  * Contributors: andreacapodacqua
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 13 Oct 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.31.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 27 Aug 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.30.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'tpe/update_gripper_range' into 'humble-devel'
+    Update close motion for pal pro gripper
+    See merge request robots/tiago_pro_robot!153
+  * Update close motion for pal pro gripper
+  * Contributors: thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 05 Aug 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.30.0-1jammy) jammy; urgency=high
+
+  * launch the module not bringup.launch
+  * typo
+  * checking for EE to be pal-pro-gripper
+  * moving the side logic
+  * deviding launch file to better dbeug and handle different gripper type
+  * add gripper_grasper module
+  * Contributors: Matteo Villani
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 01 Aug 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.29.5-1jammy) jammy; urgency=high
+
+  * Sim adding boxing motion
+  * Contributors: silviamasiello
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 01 Aug 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.29.4-1jammy) jammy; urgency=high
+
+  * Fix home sides motions to updateit as the home motion
+  * Add explore motion
+  * Add reach motions
+  * Add reach up motion
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 18 Jul 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.29.3-1jammy) jammy; urgency=high
+
+  * Add remappings for removing robot_description namespace
+  * Contributors: Noel Jimenez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 16 Jul 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.29.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Jul 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.29.1-1jammy) jammy; urgency=high
+
+  * Add namespace to safe_command_node instances
+  * Add safe_command to joystick analyzers
+  * Contributors: Noel Jimenez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Jul 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.29.0-1jammy) jammy; urgency=high
+
+  * Add diagnostic analyzers
+  * Contributors: Noel Jimenez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 08 Jul 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.28.0-1jammy) jammy; urgency=high
+
+  * Adapt to changes in play_motion2
+  * Contributors: davidfernandez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 18 Jun 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.27.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 17 Jun 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.27.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 06 Jun 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.26.4-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 05 Jun 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.26.3-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 05 Jun 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.26.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 04 Jun 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.26.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'air/fix/head_motions' into 'humble-devel'
+    Remove head motions
+    See merge request robots/tiago_pro_robot!132
+  * Remove head motions
+  * Contributors: Aina, thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 03 Jun 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.26.0-1jammy) jammy; urgency=high
+
+  * Better calibration motions
+  * Launching the SEA broadcaster and basic calibration movements
+  * Contributors: oscarmartinez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 29 May 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.8-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 28 May 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.7-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 19 May 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.6-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 08 May 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.5-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 02 May 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.4-1jammy) jammy; urgency=high
+
+  * Add motion file for allegro and rebase
+  * Add motion planner files with allegro
+  * Add allegro hand on moveit configuration
+  * Add allegro hand as a possible end effector
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 17 Apr 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.3-1jammy) jammy; urgency=high
+
+  * Add missing home motions for single arm
+  * Contributors: David ter Kuile
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 03 Apr 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 02 Apr 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 31 Mar 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.25.0-1jammy) jammy; urgency=high
+
+  * Support for SEA in the bringup
+  * Contributors: oscarmartinez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 27 Mar 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.24.0-1jammy) jammy; urgency=high
+
+  * removed marker_vel
+  * added tab_vel to twist_mux
+  * Contributors: andreacapodacqua
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 25 Mar 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.23.4-1jammy) jammy; urgency=high
+
+  * Restructure joystick config files
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 25 Mar 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.23.3-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 18 Mar 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.23.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 28 Feb 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.23.1-1jammy) jammy; urgency=high
+
+  * Fix boxing for spherical wrist
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 27 Feb 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.23.0-1jammy) jammy; urgency=high
+
+  * update locks and topics to integrate assisted_teleop
+  * Contributors: andreacapodacqua
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 24 Feb 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.22.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 18 Feb 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.22.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 23 Jan 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.22.0-1jammy) jammy; urgency=high
+
+  * lock robot if charging
+  * Contributors: antoniobrandi
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 22 Jan 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.21.0-1jammy) jammy; urgency=high
+
+  * Merge branch 'tpe/simplify-3d-model' into 'humble-devel'
+    Tpe/simplify 3d model
+    See merge request robots/tiago_pro_robot!104
+  * Remove has_tray argument
+  * Contributors: thomas.peyrucain, thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 16 Jan 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.20.0-1jammy) jammy; urgency=high
+
+  * Remove unused base_type argument
+  * Remove unused robot_name argument
+  * Contributors: Noel Jimenez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 07 Jan 2025 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.19.0-1jammy) jammy; urgency=high
+
+  * Remove safety-eps form torso and update boxing motion
+  * Contributors: David ter Kuile
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 10 Dec 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.18.0-1jammy) jammy; urgency=high
+
+  * Add head motions
+  * Add prefix to pm2 module
+  * Remove camera model as parameter for pm2 launch file
+  * Keep camera in tiago pro
+  * Remove camera model as arg
+  * Change head controller path
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 02 Dec 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.17.0-1jammy) jammy; urgency=high
+
+  * Apply elif condition
+  * Fix enter between planning_groups & exclude_from_planning_joints
+  * Remove unneeded planning groups
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 21 Nov 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.16.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 08 Nov 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.15.0-1jammy) jammy; urgency=high
+
+  * Fixing pipeline
+  * Adding safe command to joystick
+  * Contributors: vivianamorlando
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 06 Nov 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.14.2-1jammy) jammy; urgency=high
+
+  * Disable torso control with joystick
+  * Contributors: David ter Kuile
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 06 Nov 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.14.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'air/fix/motions' into 'humble-devel'
+    Fix home motion for straight wrist
+    See merge request robots/tiago_pro_robot!90
+  * Add head joints
+  * Fix home motion for straight wrist
+  * Contributors: Aina, thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 30 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.14.0-1jammy) jammy; urgency=high
+
+  * Add wrist models to play_motion2 module
+  * Contributors: Noel Jimenez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 29 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.13.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 29 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.12.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 28 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.12.0-1jammy) jammy; urgency=high
+
+  * Put back safety controller for the torso + change motions
+  * Contributors: thomas.peyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 28 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.11.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 25 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.10.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'tpe/fix_head' into 'humble-devel'
+    Tpe/fix head
+    See merge request robots/tiago_pro_robot!81
+  * Add boxing and fix home
+  * Update torso up and down and the specific motions for each arm
+  * Add 2 different files for motions depending on the writst
+  * Contributors: Aina, thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 22 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.10.0-1jammy) jammy; urgency=high
+
+  * Add new home to arm right and left
+  * change home motion as boxing
+  * Contributors: Aina
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 21 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.9.0-1jammy) jammy; urgency=high
+
+  * Revert to previous home motion
+  * Contributors: thomas.peyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 11 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.8.2-1jammy) jammy; urgency=high
+
+  * Merge branch 'tpe/fix_wrist' into 'humble-devel'
+    update motions with new wrist
+    See merge request robots/tiago_pro_robot!75
+  * update motions with new wrist
+  * Contributors: thomas.peyrucain, thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 02 Oct 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.8.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'tpe/limit_update' into 'humble-devel'
+    Update pal_sea_arm to add the joint reflect + update the home motion
+    See merge request robots/tiago_pro_robot!74
+  * Update pal_sea_arm to add the joint reflect + update the home motion
+  * Contributors: thomas.peyrucain, thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 27 Sep 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.8.0-1jammy) jammy; urgency=high
+
+  * New launch args
+  * Support for removable tray
+  * Contributors: oscarmartinez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 19 Sep 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.7.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 12 Sep 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.6.0-1jammy) jammy; urgency=high
+
+  * Add slash to node names on parameter files
+  * Remove the unnecesary ft_sensor arguments in bringup
+  * Remove ft_sensor from play_motion related files
+  * Remove ft_sensor related in joy_teleop
+  * Remove ft_sensor from HW specific config generation
+  * Contributors: Noel Jimenez, oscarmartinez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 10 Sep 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.5.0-1jammy) jammy; urgency=high
+
+  * Refactor mobile_base_controller launch
+  * Contributors: David ter Kuile
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 29 Aug 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.4.0-1jammy) jammy; urgency=high
+
+  * Adapted so it is the same as tiago dual
+  * Suggested changes
+  * Added play motion module
+  * Suggested changes
+  * Hardware specific motions with grippers
+  * Contributors: oscarmartinez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 22 Aug 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.3.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 08 Aug 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.2.0-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 07 Aug 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.1.0-1jammy) jammy; urgency=high
+
+  * enabled y-axis base movements
+  * Fix path
+  * Fix default device
+  * Contributors: andreacapodacqua, thomas.peyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 05 Aug 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.13-1jammy) jammy; urgency=high
+
+  * Add warning for pal_module_cmake not found
+  * Contributors: Noel Jimenez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 09 Jul 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.12-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 27 Jun 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.11-1jammy) jammy; urgency=high
+
+  * Merge branch 'dtk/move-robot-args' into 'humble-devel'
+    Change import for launch args
+    See merge request robots/tiago_pro_robot!50
+  * Change import for launch args
+  * Merge branch 'dtk/fix/joystick-driver' into 'humble-devel'
+    Add new joy_linux node
+    See merge request robots/tiago_pro_robot!45
+  * Add joy linux to launch file
+  * Add new joy_linux node
+  * Contributors: David ter Kuile, davidterkuile
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 26 Jun 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.10-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 22 May 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.9-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 09 May 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.8-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 26 Apr 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.7-1jammy) jammy; urgency=high
+
+  * Merge branch 'dtk/fix/play-motion2-dependency' into 'humble-devel'
+    Add dependency of play_motion2
+    See merge request robots/tiago_pro_robot!37
+  * Add dependency of play_motion2
+  * Merge branch 'omm/feat/public_sim_check' into 'humble-devel'
+    Public Sim check
+    See merge request robots/tiago_pro_robot!36
+  * is_public_sim support in launch files
+  * Contributors: Oscar, davidterkuile
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 18 Apr 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.6-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 17 Apr 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.5-1jammy) jammy; urgency=high
+
+  * Merge branch 'dtk/feat/add-modules' into 'humble-devel'
+    Dtk/feat/add modules
+    See merge request robots/tiago_pro_robot!32
+  * fix teleop config file paths and names
+  * Fix argument typo in joy_teleop
+  * Add modules
+  * Contributors: David ter Kuile, Noel Jimenez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 16 Apr 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.4-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 10 Apr 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.3-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 26 Mar 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.2-1jammy) jammy; urgency=high
+
+  * Merge branch 'dtk/fix/fix-nav-topic' into 'humble-devel'
+    Dtk/fix/fix nav topic
+    See merge request robots/tiago_pro_robot!29
+  * Change twist mux navigation topic
+  * Add missing sim time to twist mux
+  * Contributors: David ter Kuile, andreacapodacqua
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 26 Mar 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'dtk/fix/restructure' into 'humble-devel'
+    Dtk/fix/restructure
+    See merge request robots/tiago_pro_robot!28
+  * update copyright year
+  * Add missnig use sim time arg
+  * Update motion name
+  * Disable gripper specific motions
+  * update config files
+  * Add regen_em script
+  * Restructure launch file tiago_pro_bringup
+  * Merge branch 'fix/rename_approach_planner' into 'humble-devel'
+    Rename approach_planner config to motion_planner
+    See merge request robots/tiago_pro_robot!25
+  * Rename approach_planner config to motion_planner
+  * Merge branch 'fix/update_approach_planner_config' into 'humble-devel'
+    Update approach_planner configuration
+    See merge request robots/tiago_pro_robot!24
+  * Update approach_planner configuration
+  * Contributors: David ter Kuile, Jordan Palacios, Noel Jimenez, davidterkuile
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 22 Mar 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (1.0.0-1jammy) jammy; urgency=high
+
+  * Merge branch 'ros2-migration' into 'humble-devel'
+    Ros2 migration
+    See merge request robots/tiago_pro_robot!23
+  * fix twist_mux config name
+  * simplify joy_telop launch file (as done for tiago and ari)
+  * update to 3.8 the cmake_minimum_required Version
+  * twist mux and joytelop added - to check
+  * update launch files with launch_pal structure
+  * update motions yaml file
+  * migration launch files
+  * CMakeLists and package files
+  * config files
+  * migration of CMakeLists.txt and package.xml to ros2
+  * Contributors: Adria Roig, ileniaperrella
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 30 Jan 2024 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.11-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 08 Nov 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.10-1jammy) jammy; urgency=high
+
+  * Merge branch 'change_name' into 'master'
+    Change tiago_v2_prototype to tiago_pro + move arm to an external package
+    See merge request robots/tiago_pro_robot!16
+  * Change tiago_v2_prototype to tiago_pro + move arm to an external package
+  * Contributors: Jordan Palacios, thomaspeyrucain
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 20 Oct 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.9-1jammy) jammy; urgency=high
+
+  * Merge branch 'fix_home' into 'master'
+    new home gripper 7
+    See merge request robots/tiago_pro_robot!11
+  * no alive motions
+  * new home gripper 7
+  * Contributors: Aina, Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 25 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.8-1jammy) jammy; urgency=high
+
+  * Merge branch 'wbc_per_arm' into 'master'
+    Wbc per arm
+    See merge request robots/tiago_pro_robot!10
+  * added the motion tiago_dancing_happy
+  * Contributors: Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 24 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.7-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 24 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.6-1jammy) jammy; urgency=high
+
+  * Merge branch 'fix_motions' into 'master'
+    Fix motions
+    See merge request robots/tiago_pro_robot!7
+  * modified home motion so the arms won't need to support on base covers on poweroff
+  * new home_right/left and gripper fixed on tiago_dancing
+  * no meta descriptio
+  * alie_fixed and home joint 7
+  * offer and shake
+  * Contributors: Aina, Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 24 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.5-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 22 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.4-1jammy) jammy; urgency=high
+
+  * Merge branch 'flip_arm_link_3' into 'master'
+    remove joy_teleop from bringup and use startup as the incrementer server is...
+    See merge request robots/tiago_pro_robot!6
+  * added the new home motion and review the torso heights
+  * fix up the main motions for stress testing
+  * Don't start actuator pid controllers and position controllers by default, and handle it by an application
+  * remove joy_teleop from bringup and use startup as the incrementer server is timing out with delay in deployer
+  * comment out the robot pose publisher until the navigation is setup
+  * added more motions generated by aina
+  * launch Move group for motion planning
+  * load the pre-defined motions in the play_motion launch file
+  * added some generic motion configuration on the TIAGo2 Robot
+  * Contributors: Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Sat, 20 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.3-1jammy) jammy; urgency=high
+
+  * Merge branch 'play_motion_fixes' into 'master'
+    play motion fixes
+    See merge request robots/tiago_pro_robot!4
+  * add play_motion to the bringup launch
+  * added head joints in the exclude from planning joints list
+  * Contributors: Sai Kishor Kothakota, ileniaperrella
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 16 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 16 May 2023 00:00:00 -0000
+
+ros-humble-tiago-pro-bringup (0.0.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'new_v2_bringup' into 'master'
+    New v2 bringup and urdf
+    See merge request robots/tiago_pro_robot!1
+  * Merge branch 'play-motion' into 'new_v2_bringup'
+    Play motion
+    See merge request robots/tiago_pro_robot!3
+  * update the actuator PID values for the whole arm
+  * added play_motion launch files
+  * Launch actuator pid controller and load its configuration
+  * Fix broken path
+  * added the bringup package and the configuration
+  * Contributors: Jordan Palacios, Sai Kishor Kothakota, ileniaperrella
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 16 May 2023 00:00:00 -0000
+
+
