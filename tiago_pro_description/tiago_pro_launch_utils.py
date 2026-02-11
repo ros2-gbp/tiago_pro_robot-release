@@ -20,6 +20,9 @@ def get_tiago_pro_hw_suffix(
     end_effector_left: str = "no-end-effector",
     ft_sensor_right: str = "no-ft-sensor",
     ft_sensor_left: str = "no-ft-sensor",
+    ft_sensor_teleop_right: str = "no-ft-sensor",
+    ft_sensor_teleop_left: str = "no-ft-sensor",
+    has_teleop_arms: bool = False,
 ):
     """
     Generate a substitution that creates a text suffix combining the specified \
