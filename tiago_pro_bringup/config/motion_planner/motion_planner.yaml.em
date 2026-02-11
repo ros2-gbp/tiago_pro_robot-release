@@ -12,6 +12,11 @@
 @[else]@
         - torso
 @[end if]@
+@[if has_teleop_arms]@
+        - arms_teleop
+        - arm_teleop_left
+        - arm_teleop_right
+@[end if]@
       exclude_from_planning_joints:
         - head_1_joint
         - head_2_joint
