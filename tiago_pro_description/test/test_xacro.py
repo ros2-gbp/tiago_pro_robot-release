@@ -34,12 +34,14 @@ arm_args = (
 wrist_args_left = (
     TiagoProArgs.wrist_model_left,
     TiagoProArgs.tool_changer_left,
-    TiagoProArgs.ft_sensor_left
+    TiagoProArgs.ft_sensor_left,
+    TiagoProArgs.has_wrist_camera
 )
 wrist_args_right = (
     TiagoProArgs.wrist_model_right,
     TiagoProArgs.tool_changer_right,
     TiagoProArgs.ft_sensor_right,
+    TiagoProArgs.has_wrist_camera
 )
 
 
@@ -51,6 +53,10 @@ def exclude_allegro_hand(end_effector):
     return end_effector
 
 
+def force_arg_value(arg_obj, value):
+    return DeclareLaunchArgument(name=arg_obj.name, default_value=str(value), choices=[str(value)])
+
+
 if not os.environ.get('PAL_DISTRO'):
     end_effector_left = exclude_allegro_hand(TiagoProArgs.end_effector_left)
     end_effector_right = exclude_allegro_hand(TiagoProArgs.end_effector_right)
@@ -60,6 +66,10 @@ else:
     end_effector_right = TiagoProArgs.end_effector_right
     gripper_args = (end_effector_left, end_effector_right)
 
+teleop_args = (
+    TiagoProArgs.ft_sensor_teleop_right,
+    TiagoProArgs.ft_sensor_teleop_left,
+)
 test_xacro_base = define_xacro_test(
     xacro_file_path, arm_args, TiagoProArgs.base_type)
 test_xacro_laser = define_xacro_test(
@@ -73,3 +83,8 @@ test_xacro_ee = define_xacro_test(
     xacro_file_path, end_effector_left, wrist_args_left)
 test_xacro_ee = define_xacro_test(
     xacro_file_path, end_effector_right, wrist_args_right)
+test_xacro_teleop_active = define_xacro_test(
+    xacro_file_path, force_arg_value(TiagoProArgs.has_teleop_arms, 'True'), teleop_args)
+test_xacro_wrist_camera = define_xacro_test(
+    xacro_file_path, force_arg_value(TiagoProArgs.has_wrist_camera, 'True'),
+    wrist_args_left + wrist_args_right)
