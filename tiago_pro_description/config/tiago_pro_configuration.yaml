@@ -8,11 +8,11 @@ arm_type_left:
   default_value: 'tiago-pro'
 wrist_model_right:
   description: 'Wrist model right'
-  choices: ['spherical-wrist', 'straight-wrist']
+  choices: ['spherical-wrist', 'straight-wrist', 'short-wrist']
   default_value: 'spherical-wrist'
 wrist_model_left:
   description: 'Wrist model left'
-  choices: ['spherical-wrist', 'straight-wrist']
+  choices: ['spherical-wrist', 'straight-wrist', 'short-wrist']
   default_value: 'spherical-wrist'
 laser_model:
   description: 'Base laser model'
@@ -56,11 +56,11 @@ base_type:
   default_value: 'omni_base'
 camera_model:
   description: 'Head camera model'
-  choices: ['realsense-d435', 'realsense-d455']
+  choices: ['realsense-d435', 'realsense-d435i', 'realsense-d455']
   default_value: 'realsense-d435'
 wheel_model:
   description: 'Wheel model'
-  choices: ['moog']
+  choices: ['moog', 'grassland', 'no-wheels']
   default_value: 'moog'
 torque_estimation:
   description: 'The arm has torque estimation'
@@ -76,5 +76,9 @@ has_wrist_camera:
   default_value: 'False'
 calibration_tool:
   description: 'Set to True to include the calibration tool on the gripper'
+  choices: ['False', 'True']
+  default_value: 'False'
+limits_v2:
+  description: 'Use limits v2 for the arm joints'
   choices: ['False', 'True']
   default_value: 'False'
