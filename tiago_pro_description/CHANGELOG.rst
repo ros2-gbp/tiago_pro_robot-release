@@ -2,6 +2,87 @@
 Changelog for package tiago_pro_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.4.1 (2026-06-17)
+------------------
+* frequency of ros2_controllers in simulation from 100Hz to 1kHz
+* Contributors: francescodorazio
+
+2.4.0 (2026-06-05)
+------------------
+* revert d435 camera in robot configuration
+* Contributors: ileniaperrella
+
+2.3.0 (2026-05-21)
+------------------
+* added option d435i as default
+* Contributors: martinaannicelli
+
+2.2.5 (2026-04-24)
+------------------
+
+2.2.4 (2026-04-20)
+------------------
+
+2.2.3 (2026-04-20)
+------------------
+* Remove gazebo plugins from the hardware side
+* Contributors: Noel Jimenez
+
+2.2.2 (2026-04-13)
+------------------
+* Add the type string due the issue that is not yet fixed in this release
+* Contributors: thomas.peyrucain
+
+2.2.1 (2026-04-13)
+------------------
+
+2.2.0 (2026-04-10)
+------------------
+* Fix jobs
+* Add safety controller to prevent the torso to get stuck in simulation with a small epsilon
+* Add arguments to support the new gazebo
+* Contributors: thomaspeyrucain
+
+2.1.3 (2026-04-08)
+------------------
+
+2.1.2 (2026-03-31)
+------------------
+
+2.1.1 (2026-03-24)
+------------------
+
+2.1.0 (2026-03-19)
+------------------
+* Add support for short-wrist
+* Contributors: Noel Jimenez
+
+2.0.1 (2026-03-19)
+------------------
+
+2.0.0 (2026-03-05)
+------------------
+
+1.36.3 (2026-02-26)
+-------------------
+* Adding new wheel_type grassland. Used in the ethercat system
+* Contributors: Jordan Palacios
+
+1.36.2 (2026-02-26)
+-------------------
+* Add support for no-wheels
+* Contributors: Jordan Palacios
+
+1.36.1 (2026-02-24)
+-------------------
+
+1.36.0 (2026-02-18)
+-------------------
+* Fix coma
+* Add new limits values
+* Add new parameter for the limits
+* Contributors: Aina
+
 1.35.4 (2026-02-10)
 -------------------
 * adding calibration_tool param

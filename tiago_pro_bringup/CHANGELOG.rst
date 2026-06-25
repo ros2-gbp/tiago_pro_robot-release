@@ -2,6 +2,79 @@
 Changelog for package tiago_pro_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.4.1 (2026-06-17)
+------------------
+
+2.4.0 (2026-06-05)
+------------------
+
+2.3.0 (2026-05-21)
+------------------
+
+2.2.5 (2026-04-24)
+------------------
+* reduce gripper motion for open from 0.079 to 0.07
+* Contributors: ileniaperrella
+
+2.2.4 (2026-04-20)
+------------------
+
+2.2.3 (2026-04-20)
+------------------
+
+2.2.2 (2026-04-13)
+------------------
+
+2.2.1 (2026-04-13)
+------------------
+
+2.2.0 (2026-04-10)
+------------------
+* Add arguments to support the new gazebo
+* Contributors: thomaspeyrucain
+
+2.1.3 (2026-04-08)
+------------------
+
+2.1.2 (2026-03-31)
+------------------
+* Remove init
+* Contributors: Aina
+
+2.1.1 (2026-03-24)
+------------------
+
+2.1.0 (2026-03-19)
+------------------
+* Add support for short-wrist
+* Contributors: Noel Jimenez
+
+2.0.1 (2026-03-19)
+------------------
+* Add safety incrementer controller + reduce increment to be able to close more
+* Contributors: thomas.peyrucain
+
+2.0.0 (2026-03-05)
+------------------
+* Add pal configuration
+* Switch to pal_joy + fix flake
+* Update Joystick Layout
+* Contributors: thomaspeyrucain
+
+1.36.3 (2026-02-26)
+-------------------
+
+1.36.2 (2026-02-26)
+-------------------
+
+1.36.1 (2026-02-24)
+-------------------
+* change boxing teleop motion
+* Contributors: susannamastromauro
+
+1.36.0 (2026-02-18)
+-------------------
+
 1.35.4 (2026-02-10)
 -------------------
 * adding calibration_tool param
