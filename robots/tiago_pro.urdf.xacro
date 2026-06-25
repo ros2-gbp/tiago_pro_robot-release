@@ -5,7 +5,7 @@
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
-  
+
       http://www.apache.org/licenses/LICENSE-2.0
 
   Unless required by applicable law or agreed to in writing, software
@@ -15,7 +15,7 @@
   limitations under the License.
 -->
 
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="tiago_pro">
+<robot xmlns:xacro="http://ros.org/wiki/xacro" xmlns:gz="http://gazebosim.org/schema" name="tiago_pro">
 
   <!-- ARGUMENTS -->
 
@@ -76,8 +76,11 @@
   <!-- no-ft-sensor, rokubi -->
   <xacro:arg name="ft_sensor_teleop_right" default="no-ft-sensor" />
 
-  <!-- realsense-d435 -->
-  <xacro:arg name="camera_model" default="realsense-d435" />
+  <!-- realsense-d435i -->
+  <xacro:arg name="camera_model" default="realsense-d435i" />
+
+  <!-- limits v2 -->
+  <xacro:arg name="limits_v2" default="False" />
 
   <!-- False, True -->
   <xacro:arg name="torque_estimation" default="False" />
@@ -88,7 +91,7 @@
   <xacro:arg name="gazebo_version" default="classic"/>
   <!-- False, True -->
   <xacro:arg name="has_teleop_arms" default="False" />
-  
+
   <xacro:arg name="use_sim_time" default="false"/>
   <xacro:arg name="is_public_sim" default="false"/>
   <xacro:arg name="is_multiple" default="false"/>
@@ -101,6 +104,8 @@
   <xacro:arg name="arm_roll" default="-2.0679" />
   <xacro:arg name="arm_pitch" default="0.0" />
   <xacro:arg name="arm_yaw" default="-1.2217" />
+
+  <xacro:arg name="wheel_model" default="moog" />
 
   <!-- PROPERTIES -->
 
@@ -153,6 +158,7 @@
   <xacro:property name="end_effector_teleop_right_link" value="${'wrist_teleop_right_ft_tool_link' if has_teleop_ft_sensor_right else 'arm_teleop_right_tool_link'}" />
   <xacro:property name="end_effector_teleop_left_link" value="${'wrist_teleop_left_ft_tool_link' if has_teleop_ft_sensor_left else 'arm_teleop_left_tool_link'}" />
   <xacro:property name="end_effector_right_name" value="gripper_right" />
+  <xacro:property name="limits_v2" value="$(arg limits_v2)" />
 
   <xacro:property name="has_end_effector_teleop_left" value="${end_effector_teleop_left not in ['no-end-effector']}" />
   <xacro:property name="has_end_effector_teleop_right" value="${end_effector_teleop_right not in ['no-end-effector']}" />
@@ -160,6 +166,8 @@
   <xacro:property name="end_effector_teleop_right_name" value="gripper_teleop_right" />
 
   <xacro:property name="has_wrist_camera" value="$(arg has_wrist_camera)" />
+
+  <xacro:property name="wheel_model" value="$(arg wheel_model)" />
 
   <!-- Properties check -->
   <xacro:if value="${arm_type_left not in ['tiago-pro-prototype', 'tiago-pro', 'tiago-pro-s', 'no-arm']}">
@@ -197,9 +205,12 @@
   </xacro:if>
   <xacro:if value="${ft_sensor_teleop_right not in ['no-ft-sensor', 'rokubi', 'ati']}">
     <xacro:wrong_ft_sensor_teleop_right />
-  </xacro:if>  
+  </xacro:if>
   <xacro:if value="${laser_model not in ['no-laser', 'sick-571']}">
     <xacro:wrong_laser_model />
+  </xacro:if>
+  <xacro:if value="${wheel_model not in ['moog', 'grassland', 'no-wheels']}">
+    <xacro:wrong_wheel_model />
   </xacro:if>
 
   <!-- Compatibility check within TC and ft sensors-->
@@ -274,10 +285,10 @@
       <xacro:include filename="$(find tiago_pro_description)/urdf/pilot_station/teleop_handle.urdf.xacro" />
     </xacro:if>
     <xacro:if value="${has_end_effector_teleop_left or has_end_effector_teleop_right}">
-      <xacro:include filename="$(find pal_sea_arm_description)/urdf/end_effector/end_effector.urdf.xacro" />  
+      <xacro:include filename="$(find pal_sea_arm_description)/urdf/end_effector/end_effector.urdf.xacro" />
     </xacro:if>
   </xacro:if>
-  
+
   <!-- Force Torque sensor -->
   <xacro:if value="${has_ft_sensor_right or has_ft_sensor_left or has_teleop_ft_sensor_right or has_teleop_ft_sensor_left}">
     <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ft_sensor.urdf.xacro" />
@@ -313,7 +324,7 @@
   <xacro:if value="${has_arm_left}">
 
     <!-- Arm -->
-    <xacro:pal_sea_arm name="arm_left" parent="torso_lift_link" arm_type="${arm_type_left}" wrist_model="${wrist_model_left}" tool_changer="${tool_changer_left}" reflect="1" joint_reflect="-1" arm_1_offset="${arm_left_1_joint_offset}" arm_2_offset="${arm_left_2_joint_offset}" arm_3_offset="${arm_left_3_joint_offset}" arm_4_offset="${arm_left_4_joint_offset}" arm_5_offset="${arm_left_5_joint_offset}" arm_6_offset="${arm_left_6_joint_offset}" arm_7_offset="${arm_left_7_joint_offset}">
+    <xacro:pal_sea_arm name="arm_left" parent="torso_lift_link" arm_type="${arm_type_left}" wrist_model="${wrist_model_left}" tool_changer="${tool_changer_left}" reflect="1" joint_reflect="-1" arm_1_offset="${arm_left_1_joint_offset}" arm_2_offset="${arm_left_2_joint_offset}" arm_3_offset="${arm_left_3_joint_offset}" arm_4_offset="${arm_left_4_joint_offset}" arm_5_offset="${arm_left_5_joint_offset}" arm_6_offset="${arm_left_6_joint_offset}" arm_7_offset="${arm_left_7_joint_offset}" limits_v2="${limits_v2}">
       <origin xyz="$(arg arm_x) $(arg arm_y) $(arg arm_z)" rpy="$(arg arm_roll) $(arg arm_pitch) $(arg arm_yaw)"/>
     </xacro:pal_sea_arm>
 
@@ -323,7 +334,7 @@
     </xacro:if>
 
     <xacro:if value="${has_wrist_camera}">
-      <xacro:pal_sea_arm_end_effector_camera name="gripper_left" parent="${end_effector_left_link}" type="realsense-d435" camera_position="up"/>
+      <xacro:pal_sea_arm_end_effector_camera name="gripper_left" parent="${end_effector_left_link}" type="realsense-d435i" camera_position="up"/>
     </xacro:if>
 
     <!-- FT sensors -->
@@ -337,7 +348,7 @@
   <xacro:if value="${has_arm_right}">
 
     <!-- Arm -->
-    <xacro:pal_sea_arm name="arm_right" parent="torso_lift_link" arm_type="${arm_type_right}" wrist_model="${wrist_model_right}" tool_changer="${tool_changer_right}" reflect="1" joint_reflect="1" arm_1_offset="${arm_right_1_joint_offset}" arm_2_offset="${arm_right_2_joint_offset}" arm_3_offset="${arm_right_3_joint_offset}" arm_4_offset="${arm_right_4_joint_offset}" arm_5_offset="${arm_right_5_joint_offset}" arm_6_offset="${arm_right_6_joint_offset}" arm_7_offset="${arm_right_7_joint_offset}">
+    <xacro:pal_sea_arm name="arm_right" parent="torso_lift_link" arm_type="${arm_type_right}" wrist_model="${wrist_model_right}" tool_changer="${tool_changer_right}" reflect="1" joint_reflect="1" arm_1_offset="${arm_right_1_joint_offset}" arm_2_offset="${arm_right_2_joint_offset}" arm_3_offset="${arm_right_3_joint_offset}" arm_4_offset="${arm_right_4_joint_offset}" arm_5_offset="${arm_right_5_joint_offset}" arm_6_offset="${arm_right_6_joint_offset}" arm_7_offset="${arm_right_7_joint_offset}" limits_v2="${limits_v2}">
       <origin xyz="$(arg arm_x) ${-1.0*$(arg arm_y)} $(arg arm_z)" rpy="$(arg arm_roll) ${-1.0*$(arg arm_pitch)} ${-3.14159 -$(arg arm_yaw)}"/>
     </xacro:pal_sea_arm>
 
@@ -347,7 +358,7 @@
     </xacro:if>
 
     <xacro:if value="${has_wrist_camera}">
-      <xacro:pal_sea_arm_end_effector_camera name="gripper_right" parent="${end_effector_right_link}" type="realsense-d435" camera_position="up"/>
+      <xacro:pal_sea_arm_end_effector_camera name="gripper_right" parent="${end_effector_right_link}" type="realsense-d435i" camera_position="up"/>
     </xacro:if>
 
     <!-- FT sensors -->
@@ -357,17 +368,17 @@
 
   </xacro:if>
 
-  <!-- Teleop arms FT --> 
+  <!-- Teleop arms FT -->
   <xacro:if value="${has_teleop_arms}">
-    
+
     <xacro:pal_sea_arm name="arm_teleop_right" parent="pilot_station_base_link" arm_type="${arm_type_teleop_right}" wrist_model="${wrist_model_right}" tool_changer="${tool_changer_teleop_right}" reflect="1" joint_reflect="1" arm_1_offset="${arm_right_1_joint_offset}" arm_2_offset="${arm_right_2_joint_offset}" arm_3_offset="${arm_right_3_joint_offset}" arm_4_offset="${arm_right_4_joint_offset}" arm_5_offset="${arm_right_5_joint_offset}" arm_6_offset="${arm_right_6_joint_offset}" arm_7_offset="${arm_right_7_joint_offset}">
-      <origin xyz="0.0 -0.159181203216899 1.21589163274" rpy="-2.06788770984932 0 -1.91986217719377"/>    
+      <origin xyz="0.0 -0.159181203216899 1.21589163274" rpy="-2.06788770984932 0 -1.91986217719377"/>
     </xacro:pal_sea_arm>
 
     <xacro:pal_sea_arm name="arm_teleop_left" parent="pilot_station_base_link" arm_type="${arm_type_teleop_left}" wrist_model="${wrist_model_left}" tool_changer="${tool_changer_teleop_left}" reflect="1" joint_reflect="-1" arm_1_offset="${arm_left_1_joint_offset}" arm_2_offset="${arm_left_2_joint_offset}" arm_3_offset="${arm_left_3_joint_offset}" arm_4_offset="${arm_left_4_joint_offset}" arm_5_offset="${arm_left_5_joint_offset}" arm_6_offset="${arm_left_6_joint_offset}" arm_7_offset="${arm_left_7_joint_offset}">
       <origin xyz="0.0 0.159181203216899 1.21589163274" rpy="-2.06788770984932 0 -1.22173047639603"/>
-    </xacro:pal_sea_arm>  
-    
+    </xacro:pal_sea_arm>
+
     <xacro:if value="${has_teleop_ft_sensor_right}">
       <xacro:ft_sensor type="${ft_sensor_teleop_right}" name="wrist_teleop_right" parent="arm_teleop_right_tool_link"/>
     </xacro:if>
@@ -388,10 +399,10 @@
     <xacro:unless value="${has_end_effector_teleop_right}">
       <xacro:tiago_pro_teleop_handle name="teleop_handle_right" parent="${end_effector_teleop_right_link}"/>
     </xacro:unless>
-    
+
   </xacro:if>
 
   <!-- ROS 2 Control -->
-  <xacro:tiago_pro_ros2_control use_sim_time="$(arg use_sim_time)" has_teleop_arms="${has_teleop_arms}"/>
+  <xacro:tiago_pro_ros2_control use_sim_time="$(arg use_sim_time)" has_teleop_arms="${has_teleop_arms}" gazebo_version="${gazebo_version}"/>
 
 </robot>
