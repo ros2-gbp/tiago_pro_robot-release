@@ -23,6 +23,7 @@ from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration
 from launch.actions import DeclareLaunchArgument, OpaqueFunction, SetLaunchConfiguration
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 from launch_param_builder import load_xacro
 
 from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
@@ -53,11 +54,13 @@ class LaunchArguments(LaunchArgumentsBase):
     torque_estimation: DeclareLaunchArgument = TiagoProArgs.torque_estimation
     has_teleop_arms: DeclareLaunchArgument = TiagoProArgs.has_teleop_arms
     has_wrist_camera: DeclareLaunchArgument = TiagoProArgs.has_wrist_camera
-
+    limits_v2: DeclareLaunchArgument = TiagoProArgs.limits_v2
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     namespace: DeclareLaunchArgument = CommonArgs.namespace
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
     calibration_tool: DeclareLaunchArgument = TiagoProArgs.calibration_tool
+    wheel_model: DeclareLaunchArgument = TiagoProArgs.wheel_model
+    gazebo_version: DeclareLaunchArgument = CommonArgs.gazebo_version
 
 
 def declare_actions(launch_description: LaunchDescription, launch_args: LaunchArguments):
@@ -65,11 +68,20 @@ def declare_actions(launch_description: LaunchDescription, launch_args: LaunchAr
     launch_description.add_action(OpaqueFunction(
         function=create_robot_description_param))
 
+    # Using ParameterValue is needed so ROS knows the parameter type
+    # Otherwise https://github.com/ros2/launch_ros/issues/136
     rsp = Node(package='robot_state_publisher',
                executable='robot_state_publisher',
                output='both',
-               parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time'),
-                            'robot_description': LaunchConfiguration('robot_description')}])
+               parameters=[
+                   {
+                       'use_sim_time': LaunchConfiguration('use_sim_time'),
+                       "robot_description": ParameterValue(
+                           LaunchConfiguration("robot_description"), value_type=str
+                       ),
+                   }
+               ],
+               )
 
     launch_description.add_action(rsp)
 
@@ -100,11 +112,14 @@ def create_robot_description_param(context, *args, **kwargs):
         'tool_changer_left': read_launch_argument('tool_changer_left', context),
         'torque_estimation': read_launch_argument('torque_estimation', context),
         'calibration_tool': read_launch_argument('calibration_tool', context),
+        'limits_v2': read_launch_argument('limits_v2', context),
         'use_sim_time': read_launch_argument('use_sim_time', context),
         'namespace': read_launch_argument('namespace', context),
         'is_public_sim': read_launch_argument('is_public_sim', context),
         'has_teleop_arms': read_launch_argument('has_teleop_arms', context),
-        'has_wrist_camera': read_launch_argument('has_wrist_camera', context)
+        'has_wrist_camera': read_launch_argument('has_wrist_camera', context),
+        'wheel_model': read_launch_argument('wheel_model', context),
+        'gazebo_version': read_launch_argument('gazebo_version', context),
     }
 
     calibration_dir = tempfile.TemporaryDirectory()
