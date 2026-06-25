@@ -21,7 +21,7 @@
 
       open_right:
         joints: [gripper_right_finger_joint]
-        positions: [0.07938]
+        positions: [0.07]
         times_from_start: [0.5]
         meta:
           name: Open Right Gripper
