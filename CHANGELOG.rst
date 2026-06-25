@@ -2,6 +2,89 @@
 Changelog for package tiago_pro_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.4.1 (2026-06-17)
+------------------
+* ci/cd test
+* ci/cd errors
+* defined argument to spawn a subset of tsid controllers specified in the list at the beginning of the launch file
+* Contributors: francescodorazio
+
+2.4.0 (2026-06-05)
+------------------
+
+2.3.0 (2026-05-21)
+------------------
+
+2.2.5 (2026-04-24)
+------------------
+
+2.2.4 (2026-04-20)
+------------------
+* modify the launch and config file in order to use correctly the chained
+  impedance
+* Contributors: ileniaperrella
+
+2.2.3 (2026-04-20)
+------------------
+
+2.2.2 (2026-04-13)
+------------------
+
+2.2.1 (2026-04-13)
+------------------
+* Fixing open loop param
+* Contributors: vivianamorlando
+
+2.2.0 (2026-04-10)
+------------------
+* Fix indentation
+* Fix lint
+* Rollback is teleop arg
+* Contributors: vivianamorlando
+
+2.1.3 (2026-04-08)
+------------------
+* fix identation
+* use same wrist model for teleop arms
+* Adding torso in config file of cartesian controller
+* Contributors: ileniaperrella, vivianamorlando
+
+2.1.2 (2026-03-31)
+------------------
+
+2.1.1 (2026-03-24)
+------------------
+* Fix dependencies condition
+* Remove cache + fix flake8
+* change paths for yaml
+* add dependency to package.xml
+* launch and config file of impedance controller
+* Contributors: sofieblankers, thomas.peyrucain, vivianamorlando
+
+2.1.0 (2026-03-19)
+------------------
+* Do not launch torque estimation controllers with short-wrist
+* Add support for short-wrist
+* Contributors: Noel Jimenez
+
+2.0.1 (2026-03-19)
+------------------
+
+2.0.0 (2026-03-05)
+------------------
+
+1.36.3 (2026-02-26)
+-------------------
+
+1.36.2 (2026-02-26)
+-------------------
+
+1.36.1 (2026-02-24)
+-------------------
+
+1.36.0 (2026-02-18)
+-------------------
+
 1.35.4 (2026-02-10)
 -------------------
 
