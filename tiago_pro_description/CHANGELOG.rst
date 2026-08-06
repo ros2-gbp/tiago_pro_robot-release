@@ -2,6 +2,9 @@
 Changelog for package tiago_pro_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.5.0 (2026-07-21)
+------------------
+
 2.4.1 (2026-06-17)
 ------------------
 * frequency of ros2_controllers in simulation from 100Hz to 1kHz
