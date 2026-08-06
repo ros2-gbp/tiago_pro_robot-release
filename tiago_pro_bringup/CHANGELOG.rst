@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.5.0 (2026-07-21)
+------------------
+* pre grasp motions
+* Contributors: matteovillani
+
 2.4.1 (2026-06-17)
 ------------------
 
